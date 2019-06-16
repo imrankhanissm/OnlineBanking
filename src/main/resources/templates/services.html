@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<title>Services</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/servicesStyle.css">
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+		<ul>
+		  <li><a href="home" >Home</a></li>
+		  <li><a class="navbarActive" href="services" >Services</a></li>
+		  <li><a href="contactUs" >Contact us</a></li>
+		  <li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+		  <li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+	</div>
+	<div class="serviceContainer">
+		<a class="service" href="/services/deposite" >Deposite</a>
+		<a class="service" href="/services/withdraw" >Withdraw</a>
+		<a class="service" href="/services/transfer" >Transfer</a>
+		<a class="service" href="/services/history" >History</a>
+	</div>  
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+	<title>login</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/loginStyle.css">
+	<script type="text/javascript" src="/js/login.js"></script>
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+	</div>
+	<div class="containerLogin">
+		<h1 style="margin-left:10px;" id="Login">Login</h1>
+		<p class="error" th:text="${error}"></p>
+		<form action="/login" onsubmit="return validate()" method="post">
+			<p class="label" >Username</p><br>
+			<input id="usernamelogin" class="inputStyle" type="text" autofocus="true" oninput="clearthis(this)" name="username"><br>
+			<p id="usernameError" class="error"></p>
+			<p class="label" >Password</p><br>
+			<input id="passwordlogin" class="inputStyle" type="password" oninput="clearthis(this)" name="password"><br>
+			<p id="passwordError" class="error"></p>
+			<input class="buttonStyle" type="submit" value="Login">
+		</form>
+		<a id="forgotPassword" class="link" href="/forgotPassword">Forgot password!</a><br>
+		<p class="label" >Don't have an account?</p><br>
+		<a class="buttonStyle2" href="/register">Register</a>
+	</div>
+</body>
+</html>

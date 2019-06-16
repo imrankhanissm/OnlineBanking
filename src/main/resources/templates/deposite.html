@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/homeStyle.css">
+	<script src="/js/deposite.js"></script>
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+		<ul>
+		  <li><a href="/home" >Home</a></li>
+		  <li><a href="/services" >Services</a></li>
+		  <li><a href="/contactUs" >Contact us</a></li>
+		  <li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+		  <li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+
+	</div>
+	<div class="divCenter">
+		<form action="/services/deposite" onsubmit="return validate()" method="post">
+			<input id="amount" class="inputStyle" type="number" oninput="clearThis(this)" placeholder="Amount" name="amount"> 
+			<p id="amountError" class="error"></p>
+			<input class="buttonStyle" type="submit" value="Deposite">
+		</form>
+	</div>
+</body>
+</html>
+

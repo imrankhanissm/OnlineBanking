@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Profile</title>
+		<link rel="stylesheet" href="/css/globalStyle.css">
+		<link rel="stylesheet" href="/css/profileStyle.css">
+	</head>
+	<body>
+		<div class="navBar">
+			<img id="nav-logo" alt="Logo" src="/images/logo.png">
+			<ul>
+				<li><a class="navbarActive" href="home" >Home</a></li>
+				<li><a href="services" >Services</a></li>
+				<li><a href="contactUs" >Contact us</a></li>
+				<li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+				<li><a href="/profile" id="username" th:text="${name}"></a></li>
+			</ul>
+		</div>
+		<div class="containerLogin">
+			<form action="/editProfile" method="POST">
+				<p class="label" >Username</p><br>
+				<input class="inputStyle" type="text" id="Lusername" disabled="true" th:value="${user.username}"><br>
+				<p class="label">Leave password fields blank if you dont want to change</p>
+				<p class="label" >Password</p><br>
+				<input class="inputStyle" type="password" name="password" ><br>
+				<p class="label" >Confirm Password</p><br>
+				<input class="inputStyle" type="password" ><br>
+				<p class="label">Name</p><br>
+				<input class="inputStyle" type="text" th:value="${user.name}" name="name"><br>
+				<p class="label">Gender</p>
+				<input type="radio" name="gender" value="true" th:field="*{user.gender}">male
+				<input type="radio" name="gender" value="false" th:field="*{user.gender}">female<br>
+				<p class="label">Date of birth</p><br>
+				<input class="inputStyle" type="date" th:value="${user.dateOfBirth}" name="dateOfBirth"><br>
+				<p class="label">Email</p><br>
+				<input class="inputStyle" type="email" th:value="${user.email}" name="email"><br>
+				<p class="label">Phone</p><br>
+				<input class="inputStyle" type="tel" th:value="${user.phone}" name="phone"><br>
+				<p class="label">Country</p><br>
+				<input type="text" class="inputStyle" th:value="${address.country}" name="country"><br>
+				<p class="label">pincode</p><br>
+				<input type="text" class="inputStyle" th:value="${address.pincode}" name="pincode"><br>
+				<p class="label">street</p><br>
+				<input type="text" class="inputStyle" th:value="${address.street}" name="street"><br>
+				<p class="label">doorNo</p><br>
+				<input type="text" class="inputStyle" th:value="${address.doorNo}" name="doorNo"><br>
+				<input class="buttonStyle" type="submit" value="Save">
+			</form>
+		</div>
+	</body>
+	</html>

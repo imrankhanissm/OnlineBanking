@@ -1,0 +1,19 @@
+.serviceContainer{
+	text-align: center;
+	margin-top: 150px;
+}
+
+.service{
+	display: inline;
+	padding: 40px;
+	margin: 40px;
+	background-color: orangered;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: medium;
+}
+
+.service:hover{
+	background-color: tomato;
+}

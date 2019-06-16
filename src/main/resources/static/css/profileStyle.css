@@ -1,0 +1,23 @@
+.inputDisabled{
+	font: inherit;
+	border: 1px solid lightgrey;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 10px;
+	width: -webkit-fill-available;
+	max-width: 300px;
+	-webkit-appearance: none;
+}
+
+.containerLogin{
+	margin-top: 40px;
+	display: block;
+    margin: auto;
+    width: 330px;
+    border-style: solid;
+    border-width: 0px;
+}
+
+#editProfile{
+	text-decoration: none;
+}

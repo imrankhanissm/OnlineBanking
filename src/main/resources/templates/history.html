@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+	<title>History</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/historyStyle.css">
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+		<ul>
+			<li><a href="/home" >Home</a></li>
+			<li><a href="/services" >Services</a></li>
+			<li><a href="/contactUs" >Contact us</a></li>
+			<li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+			<li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+	</div>
+	<center>
+		<table>
+			<tr>
+				<th>Time</th>
+				<th>Trasaction</th>
+				<th>Amount</th>
+				<th>Balance</th>
+			</tr>
+			<tr th:each="transaction: ${transactions}">
+				<td th:text="${transaction.timestamp}"></td>
+				<td th:text="${transaction.type}"></td>
+				<td th:if="${transaction.amount &gt; 0}" class="credit" th:text="${transaction.amount}">100</td>
+				<td th:if="${transaction.amount &lt; 0}" class="debit" th:text="${transaction.amount}">100</td>
+				<td th:text="${transaction.accountBalance}">100</td>
+			</tr>
+		</table>
+		<a th:if="${prevPage &gt; -1}" class="buttonStyle histNav" th:href="@{/services/history(page=${prevPage})}">prev</a>
+		<a th:if="${nextPage &gt; -1}" class="buttonStyle histNav" th:href="@{/services/history(page=${nextPage})}">Next</a>
+	</center>	
+</body>
+</html>

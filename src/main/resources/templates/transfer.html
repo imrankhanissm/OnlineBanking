@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Transfer</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/transferStyle.css">
+	<script src="/js/transfer.js"></script>
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+		<ul>
+		  <li><a href="/home" >Home</a></li>
+		  <li><a href="/services" >Services</a></li>
+		  <li><a href="/contactUs" >Contact us</a></li>
+		  <li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+		  <li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+	</div>
+	<div  class="divCenter">
+		<form action="" method="post">
+			<input id="accountNumber" class="inputStyle" type="number" placeholder="Account number" name="accountNumber">
+			<p id="accountNumberError" class="error"></p>
+			<input id="amount" class="inputStyle" type="number" placeholder="Amount" name="amount">
+			<p id="amountError" class="error"></p>
+			<input class="buttonStyle" type="submit" value="Transfer">
+		</form>
+	</div>
+</body>
+</html>

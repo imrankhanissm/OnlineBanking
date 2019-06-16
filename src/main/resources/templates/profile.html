@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Profile</title>
+		<link rel="stylesheet" href="/css/globalStyle.css">
+		<link rel="stylesheet" href="/css/profileStyle.css">
+	</head>
+	<body>
+		<div class="navBar">
+			<img id="nav-logo" alt="Logo" src="/images/logo.png">
+			<ul>
+				<li><a class="navbarActive" href="home" >Home</a></li>
+				<li><a href="services" >Services</a></li>
+				<li><a href="contactUs" >Contact us</a></li>
+				<li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+				<li><a href="/profile" id="username" th:text="${name}"></a></li>
+			</ul>
+		</div>
+		<div class="containerLogin">
+			<a id="editProfile" class="buttonStyle" href="/editProfile">Edit profile</a>
+			<p class="label" >Account number</p><br>
+			<input class="inputStyle" disabled="true" type="text" id="Lusername" th:value="${user.accountNumber}"><br>
+			<p class="label" >Username</p><br>
+			<input class="inputStyle" disabled="true" type="text" id="Lusername" th:value="${user.username}"><br>
+			<p class="label" >Password</p><br>
+			<input class="inputStyle" disabled="true" type="password" value="********"><br>
+			<p class="label">Name</p><br>
+			<input class="inputStyle" disabled="true" type="text" th:value="${user.name}"><br>
+			<p class="label">Gender</p>
+			<input type="radio" name="gender" disabled="true" value="true" th:field="*{user.gender}">male
+			<input type="radio" name="gender" disabled="true" value="false" th:field="*{user.gender}">female<br>
+			<p class="label">Date of birth</p><br>
+			<input class="inputStyle" disabled="true" type="date" th:value="${user.dateOfBirth}"><br>
+			<p class="label">Email</p><br>
+			<input class="inputStyle" disabled="true" type="email" th:value="${user.email}"><br>
+			<p class="label">Phone</p><br>
+			<input class="inputStyle" disabled="true" type="tel" th:value="${user.phone}"><br>
+			<p class="label">Country</p><br>
+			<input type="text" class="inputStyle" disabled="true" th:value="${address.country}"><br>
+			<p class="label">pincode</p><br>
+			<input type="text" class="inputStyle" disabled="true" th:value="${address.pincode}"><br>
+			<p class="label">street</p><br>
+			<input type="text" class="inputStyle" disabled="true" th:value="${address.street}"><br>
+			<p class="label">doorNo</p><br>
+			<input type="text" class="inputStyle" disabled="true" th:value="${address.doorNo}"><br>
+		</div>
+	</body>
+</html>

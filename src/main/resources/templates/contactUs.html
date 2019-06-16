@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact us</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/homeStyle.css">
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+		<ul>
+		  <li><a href="/home" >Home</a></li>
+		  <li><a href="/services" >Services</a></li>
+		  <li><a class="navbarActive" href="/contactUs" >Contact us</a></li>
+		  <li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+		  <li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+	</div>
+	<center>
+		<div>
+			<h2>Contact us</h2>
+		</div>
+	</center>
+</body>
+</html>

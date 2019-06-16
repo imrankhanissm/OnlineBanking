@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org" lang="en"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/homeStyle.css">
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" alt="Logo" src="/images/logo.png">
+		<ul>
+		  <li><a class="navbarActive" href="home" >Home</a></li>
+		  <li><a href="services" >Services</a></li>
+		  <li><a href="contactUs" >Contact us</a></li>
+		  <li><a id="logoutButton" class="button" href="/logout">Logout</a></li>
+		  <li><a href="/profile" id="username" th:text="${name}"></a></li>
+		</ul>
+	</div>
+	<div>
+		<center>
+			<h2>Home</h2>
+		</center>
+	</div>
+</body>
+</html>

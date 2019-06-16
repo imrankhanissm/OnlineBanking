@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" href="/css/globalStyle.css">
+	<link rel="stylesheet" href="/css/registerStyle.css">
+	<script src="/js/register.js"></script>
+</head>
+<body>
+	<div class="navBar">
+		<img id="nav-logo" width="50" alt="Angular Logo" src="/images/logo.png">
+	</div>
+	<div class="containerLogin">
+		<h1 style="margin-left:10px;" id="Login">Register</h1>
+		<form action="/register" onsubmit="return validate()" method="post">
+			<p class="label" >Username</p><br>
+			<input id="usernameRegister" class="inputStyle" type="text" autofocus="true" oninput="clearthis(this)" name="username"><br>
+			<p id="usernameError" class="error"></p>
+			
+			<p class="label" >Password</p><br>
+			<input id="passwordRegister" class="inputStyle" type="password" oninput="clearthis(this)" name="password"><br>
+			<p id="passwordError" class="error"></p>
+
+			<p class="label" >Confirm password</p><br>
+			<input id="confirmPasswordRegister" class="inputStyle" oninput="clearthis(this)" type="password"><br>
+			<p id="confirmPasswordError" class="error"></p>
+
+			<p class="label">Name</p><br>
+			<input id="nameRegister" class="inputStyle" type="text" oninput="clearthis(this)" name="name"><br>
+			<p id="nameError" class="error"></p>
+
+			<p class="label">Gender</p>
+			<input type="radio" name="gender" value="true" oninput="clearthis(this.nextElementSibling)">male
+			<input type="radio" name="gender" value="false" oninput="clearthis(this)" >female<br>
+			<p id="genderError" class="error"></p>
+
+			<p class="label">Date of birth</p><br>
+			<input id="dateOfBirthRegister" class="inputStyle" type="date" oninput="clearthis(this)" name="dateOfBirth"><br>
+			<p id="dobError" class="error"></p>
+
+			<p class="label">Email</p><br>
+			<input id="emailRegister" class="inputStyle" type="email" oninput="clearthis(this)" name="email"><br>
+			<p id="emailError" class="error"></p>
+
+			<p class="label">Phone</p><br>
+			<input id="phoneRegister" class="inputStyle" type="tel" oninput="clearthis(this)" name="phone"><br>
+			<p id="phoneError" class="error"></p>
+
+			<p class="label">Country</p><br>
+			<input id="countryRegister" type="text" class="inputStyle" oninput="clearthis(this)" name="country"><br>
+			<p id="countryError" class="error"></p>
+
+			<p class="label">pincode</p><br>
+			<input id="pincodeRegister" type="text" class="inputStyle" oninput="clearthis(this)" name="pincode"><br>
+			<p id="pincodeError" class="error"></p>
+
+			<p class="label">street</p><br>
+			<input id="streetRegister" type="text" class="inputStyle" oninput="clearthis(this)" name="street"><br>
+			<p id="streetError" class="error"></p>
+
+			<p class="label">doorNo</p><br>
+			<input id="doorNoRegister" type="text" class="inputStyle" oninput="clearthis(this)" name="doorNo"><br>
+			<p id="doorNoError" class="error"></p>
+
+			<input class="buttonStyle" type="submit" value="Register">
+		</form>
+		<p class="label" >Already have an account?</p><br>
+		<a class="buttonStyle2" href="/login">Login</a>
+	</div>
+</body>
+</html>
